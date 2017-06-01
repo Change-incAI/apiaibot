@@ -1,2 +1,2 @@
 web: node .
-web: npm start
+web: ./bottr-cli start
