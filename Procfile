@@ -1,2 +1,2 @@
 web: node .
-web: ./bottr start
+web: npm start
