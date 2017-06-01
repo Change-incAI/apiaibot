@@ -1,1 +1,1 @@
-bottr start
+web: node .
