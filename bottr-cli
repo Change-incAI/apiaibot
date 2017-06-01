@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const fs = require('fs')
 
-loadEnvFile()
+#loadEnvFile()
 
 const program = require('commander')
 const childProcess = require('child_process')
@@ -44,27 +44,6 @@ function init() {
 
       startCommand('npm install')
     })
-  })
-}
-
-function loadEnvFile() {
-  fs.readFile(__dirname + '.env', (err, data) => {
-    if (err) {
-      fs.readFile(__dirname + '/templates/.env', (err, data) => {
-        if (err) throw err
-
-        console.log('Copying .env...')
-
-        fs.writeFile('.env', data, (err) => {
-          if (err) throw err
-
-          console.log('Copied .env...')
-          require('dotenv').config({silent: true})
-        })
-      })
-    } else {
-      require('dotenv').config({silent: true})
-    }
   })
 }
 
