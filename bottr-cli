@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 const fs = require('fs')
 
-#loadEnvFile()
-
 const program = require('commander')
 const childProcess = require('child_process')
 const port = process.env.port || 3000
